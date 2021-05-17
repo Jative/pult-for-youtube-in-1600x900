@@ -1,0 +1,179 @@
+<YellowButton@Button>:
+    color: 0,0,0,1
+    background_color: 0,0,0,0
+    canvas.before:
+        Color:
+            rgba: (1,.8,0,1) if self.state == 'normal' else (.7,.7,.7,1)
+        RoundedRectangle:
+            pos: self.pos
+            size: self.size
+            radius: [30]
+
+
+<Root>:
+    canvas:
+        Rectangle:
+            source: 'bg.png'
+            size: self.size
+            pos: self.pos
+            
+    orientation: "vertical"
+    padding: "10sp"
+    spacing: "10sp"
+
+    BoxLayout:
+        size_hint_y: .2
+        orientation: "vertical"
+        spacing: "10sp"
+
+        TextInput:
+            id: inp
+            hint_text: "Ваш запрос"
+            font_size: "35sp"
+            multiline: False
+
+        YellowButton:
+            font_size: "22sp"
+            text: "НАЙТИ!"
+            bold: True
+            on_release:
+                root.Searcher()
+
+    GridLayout:
+        cols: 3
+        spacing: "10sp"
+
+        YellowButton:
+            canvas.after:
+                Rectangle:
+                    source: "Volume-Up.png"
+                    size: self.size
+                    pos: self.pos
+            on_release:
+                root.Sender("Volume-Up")
+
+        YellowButton:
+            canvas.after:
+                Rectangle:
+                    source: "Roll-Up-and-on-Main.png"
+                    size: self.size
+                    pos: self.pos
+            on_release:
+                root.Sender("Roll-Up-and-on-Main")
+
+        YellowButton:
+            canvas.after:
+                Rectangle:
+                    source: "Up.png"
+                    size: self.size
+                    pos: self.pos
+            on_release:
+                root.Sender("Scroll-Up")
+
+        YellowButton:
+            canvas.after:
+                Rectangle:
+                    source: "Volume-Down.png"
+                    size: self.size
+                    pos: self.pos
+            on_release:
+                root.Sender("Volume-Down")
+
+        YellowButton:
+            canvas.after:
+                Rectangle:
+                    source: "on-Main.png"
+                    size: self.size
+                    pos: self.pos
+            on_release:
+                root.Sender("on-Main")
+
+        YellowButton:
+            canvas.after:
+                Rectangle:
+                    source: "Down.png"
+                    size: self.size
+                    pos: self.pos
+            on_release:
+                root.Sender("Scroll-Down")
+
+        YellowButton:
+            canvas.after:
+                Rectangle:
+                    source: "Rewind-Back.png"
+                    size: self.size
+                    pos: self.pos
+            on_release:
+                root.Sender("Rewind-Back")
+
+        YellowButton:
+            canvas.after:
+                Rectangle:
+                    source: "Up.png"
+                    size: self.size
+                    pos: self.pos
+            on_release:
+                root.Sender("Up")
+
+        YellowButton:
+            canvas.after:
+                Rectangle:
+                    source: "Rewind-Forward.png"
+                    size: self.size
+                    pos: self.pos
+            on_release:
+                root.Sender("Rewind-Forward")
+
+        YellowButton:
+            canvas.after:
+                Rectangle:
+                    source: "Left.png"
+                    size: self.size
+                    pos: self.pos
+            on_release:
+                root.Sender("Left")
+
+        YellowButton:
+            canvas.after:
+                Rectangle:
+                    source: "OK.png"
+                    size: self.size
+                    pos: self.pos
+            on_release:
+                root.Sender("OK")
+
+        YellowButton:
+            canvas.after:
+                Rectangle:
+                    source: "Right.png"
+                    size: self.size
+                    pos: self.pos
+            on_release:
+                root.Sender("Right")
+
+        YellowButton:
+            canvas.after:
+                Rectangle:
+                    source: "Expand.png"
+                    size: self.size
+                    pos: self.pos
+            on_release:
+                root.Sender("Expand")
+
+        YellowButton:
+            canvas.after:
+                Rectangle:
+                    source: "Down.png"
+                    size: self.size
+                    pos: self.pos
+            on_release:
+                root.Sender("Down")
+
+        YellowButton:
+            canvas.after:
+                Rectangle:
+                    source: "Pause.png"
+                    size: self.size
+                    pos: self.pos
+            on_release:
+                root.Sender("Pause")
